@@ -25,3 +25,9 @@ The app will run on port 5173 by default.
 ```
 http://localhost:5173
 ```
+
+If you are running the proxy on another port please change the api_url environment variable inside .env file.
+
+```
+VITE_API_URL=http://localhost:3000/
+```
