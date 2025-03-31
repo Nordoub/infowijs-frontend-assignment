@@ -1,7 +1,5 @@
 import { Category } from "../models/category";
 
-export const API_BASE_URL = "http://localhost:3000/";
-
 export const categories: { [key: string]: Category } = {
   Algemeen: "nosnieuwsalgemeen",
   Binnenland: "nosnieuwsbinnenland",
