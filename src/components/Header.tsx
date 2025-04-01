@@ -14,12 +14,10 @@ const Header = () => {
     (key) => categories[key as keyof typeof categories] === selectedCategory
   );
 
-  const goToHomepage = () => navigate("/");
-
   const onSelect = (value: string) => {
     setSelectedCategory(categories[value]);
     if (isArticlePage) {
-      goToHomepage();
+      navigate("/");
     }
   };
 

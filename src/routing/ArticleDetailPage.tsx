@@ -11,6 +11,7 @@ export type ArticleParams = {
 const ArticleDetailPage = () => {
   const { id, category } = useParams<ArticleParams>();
   const article = useArticle({ id, category });
+
   return (
     <div className="2xl:w-6/10 xl:w-8/10 w-full place-self-center place-items-center mx-auto mb-10 sm:space-y-15 space-y-5">
       <img
