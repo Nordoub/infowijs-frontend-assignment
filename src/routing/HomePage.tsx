@@ -17,13 +17,14 @@ const HomePage = () => {
 
         return (
           <Link
+            key={guid}
             className={` ${i === 0 ? "md:col-span-3 lg:col-span-2" : ""} ${
               i === 1 ? "lg:col-span-2" : ""
             }`}
             to={`${selectedCategory}/article/${guid}`}
+            aria-label={`Read article: ${title}`}
           >
             <ArticleCard
-              key={guid}
               title={title}
               image={image}
               isHighlighted={shouldHighlight}

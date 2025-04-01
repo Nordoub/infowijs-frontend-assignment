@@ -7,7 +7,6 @@ const Wrapper = ({ children }: PropsWithChildren) => {
   const location = useLocation();
 
   useLayoutEffect(() => {
-    // Scroll to the top of the page when the route changes
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [location.pathname]);
 
@@ -19,7 +18,11 @@ const Layout = () => {
     <Wrapper>
       <div className="min-h-screen flex flex-col justify-between">
         <Header />
-        <main className="2xl:w-60/100 w-80/100 justify-center place-self-center ">
+        <main
+          role="main"
+          aria-label="Main Content"
+          className="2xl:w-60/100 w-80/100 justify-center place-self-center "
+        >
           <Outlet />
         </main>
         <Footer />

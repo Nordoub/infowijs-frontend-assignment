@@ -16,7 +16,8 @@ const ArticleDetailPage = () => {
       <img
         className="rounded-lg caret-transparent"
         src={article?.image ?? ""}
-        alt={"Article header image"}
+        alt={article?.title || "Article header image"}
+        aria-hidden={!article?.image}
       />
       <div className="w-full space-y-4">
         <p className="opacity-50 font-semibold">{article?.pubDate}</p>
