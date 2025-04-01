@@ -1,3 +1,5 @@
+import { Category } from "./category";
+
 export type Article = {
   title: string;
   link: string;
@@ -5,4 +7,9 @@ export type Article = {
   pubDate: string;
   guid: string;
   image?: string;
+};
+
+export type ArticleRouteParams = {
+  id: string;
+  category: Category;
 };

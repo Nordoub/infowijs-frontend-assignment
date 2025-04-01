@@ -11,16 +11,17 @@ const HomePage = () => {
 
   return (
     <div className="grid md:grid-cols-3 lg:grid-cols-4 lg:gap:10 md:gap-7 sm:gap-5">
-      {feed?.items.map(({ guid, title, image }, i) => {
+      {feed?.items.map(({ guid, title, image }, itemIndex) => {
         const shouldHighlight =
-          (width >= lg && i < 2) || (width >= md && width < lg && i < 1);
+          (width >= lg && itemIndex < 2) ||
+          (width >= md && width < lg && itemIndex < 1);
 
         return (
           <Link
             key={guid}
-            className={` ${i === 0 ? "md:col-span-3 lg:col-span-2" : ""} ${
-              i === 1 ? "lg:col-span-2" : ""
-            }`}
+            className={` ${
+              itemIndex === 0 ? "md:col-span-3 lg:col-span-2" : ""
+            } ${itemIndex === 1 ? "lg:col-span-2" : ""}`}
             to={`${selectedCategory}/article/${guid}`}
             aria-label={`Read article: ${title}`}
           >

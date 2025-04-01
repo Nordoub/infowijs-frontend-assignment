@@ -1,15 +1,10 @@
 import { useParams } from "react-router-dom";
 import useArticle from "../hooks/useArticle";
 import SafeHTML from "../components/SafeHTML";
-import { Category } from "../models/category";
-
-export type ArticleParams = {
-  id: string;
-  category: Category;
-};
+import { ArticleRouteParams } from "../models/article";
 
 const ArticleDetailPage = () => {
-  const { id, category } = useParams<ArticleParams>();
+  const { id, category } = useParams<ArticleRouteParams>();
   const article = useArticle({ id, category });
 
   return (
