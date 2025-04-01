@@ -12,7 +12,7 @@ const Dropdown = ({ selectedValue, options, onSelect }: Props) => {
   return (
     <div className="relative inline-block text-left z-30">
       <div
-        className="inline-flex justify-center items-center text-sm font-medium pr-4 p-2 text-gray-700 border-gray-300 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 caret-transparent"
+        className="inline-flex justify-center items-center text-sm font-medium pr-4 p-2 text-gray-700 border-gray-300 rounded-md hover:bg-gray-100 caret-transparent"
         onMouseEnter={() => setIsOpen(true)}
       >
         {selectedValue}
