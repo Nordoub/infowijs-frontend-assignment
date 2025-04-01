@@ -5,7 +5,7 @@ import { categories } from "../constants/config";
 import { useMatch, useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const isArticlePage = useMatch("/article/:id");
+  const isArticlePage = useMatch(":category/article/:id");
   const navigate = useNavigate();
   const { selectedCategory, setSelectedCategory } = useFeedContext();
   const options = Object.keys(categories);

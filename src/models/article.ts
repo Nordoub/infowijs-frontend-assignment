@@ -4,5 +4,5 @@ export type Article = {
   description: string;
   pubDate: string;
   guid: string;
-  image: string | null;
+  image?: string;
 };
